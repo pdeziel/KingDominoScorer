@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.patrick.kingdominoscorer.MainActivity">
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/show_camera_activity"
+        android:layout_width="match_parent"
+        android:layout_height="296dp" />
+
+    <SeekBar
+        android:id="@+id/canny_threshold"
+        android:layout_width="214dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="231dp"
+        android:progress="50"
+        android:layout_marginStart="17dp" />
+
+    <SeekBar
+        android:id="@+id/lines_threshold"
+        android:layout_width="214dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:progress="50"
+        android:layout_alignStart="@+id/canny_threshold"
+        android:layout_marginBottom="185dp" />
+
+    <SeekBar
+        android:id="@+id/min_line_length"
+        android:layout_width="214dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/canny_threshold"
+        android:layout_marginBottom="149dp"
+        android:progress="50" />
+
+    <TextView
+        android:id="@+id/min_line_length_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/min_line_length"
+        android:layout_marginEnd="80dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/canny_threshold_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/min_line_length_text"
+        android:layout_alignTop="@+id/canny_threshold"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/lines_threshold_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/min_line_length_text"
+        android:layout_alignTop="@+id/lines_threshold"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/max_line_gap_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/min_line_length_text"
+        android:layout_alignTop="@+id/max_line_gap"
+        android:text="TextView" />
+
+    <SeekBar
+        android:id="@+id/max_line_gap"
+        android:layout_width="207dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/canny_threshold"
+        android:layout_marginBottom="106dp"
+        android:progress="50" />
+
+    <SeekBar
+        android:id="@+id/block_size"
+        android:layout_width="209dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/canny_threshold"
+        android:layout_marginBottom="65dp"
+        android:progress="50" />
+
+    <TextView
+        android:id="@+id/block_size_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/min_line_length_text"
+        android:layout_alignTop="@+id/block_size"
+        android:text="TextView" />
+
+    <SeekBar
+        android:id="@+id/c"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="19dp"
+        android:progress="50" />
+
+    <TextView
+        android:id="@+id/c_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/min_line_length_text"
+        android:layout_alignTop="@+id/c"
+        android:text="TextView" />
+
+</RelativeLayout>
